@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"
+    />
+    <title>CRUD system</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Cairo:wght@200;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="stayl.css" />
+  </head>
+  <body>
+    <section id="Crud">
+      <div id="head">
+        <h2>CRUD</h2>
+        <p>product management system</p>
+      </div>
+      <div class="inputs">
+        <input type="text" id="titel" placeholder="proudact" class="inputs" />
+        <div class="price">
+          <input
+            onkeyup="gettotal()"
+            type="number"
+            id="price"
+            placeholder="price"
+            class="inputs"
+          />
+          <input
+            onkeyup="gettotal()"
+            type="number"
+            id="taxes"
+            placeholder="taxes"
+            class="inputs"
+          />
+          <input
+            onkeyup="gettotal()"
+            type="number"
+            id="ads"
+            placeholder="ads"
+            class="inputs"
+          />
+          <input
+            onkeyup="gettotal()"
+            type="number"
+            id="discount"
+            placeholder="discount"
+            class="inputs"
+          />
+          <small class="inputs" id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="count" class="inputs" />
+        <input
+          type="text"
+          id="category"
+          placeholder="category"
+          class="inputs"
+        />
+        <button id="submit">create</button>
+        <div class="output">
+          <input
+            onkeyup="search_date(this.value)"
+            type="text"
+            id="search"
+            placeholder="search"
+          />
+          <div class="search_btn">
+            <button onclick="getsearchmood(this.id)" id="search_proudact">
+              search By proudact
+            </button>
+            <button onclick="getsearchmood(this.id)" id="search_category">
+              search By category
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="btn_delet"></div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>proudact</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ADS</th>
+            <th>discount</th>
+            <th>Total</th>
+            <th>category</th>
+            <th>Update</th>
+            <th>Delet</th>
+          </tr>
+        </thead>
+        <tbody id="tablebody"></tbody>
+      </table>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
